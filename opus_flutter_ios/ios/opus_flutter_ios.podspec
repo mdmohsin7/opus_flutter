@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name                  = 'OpusKit'
+  s.name                  = 'opus_flutter_ios'
   s.version               = '1.4.0'
   s.summary               = 'A totally open, royalty-free, highly versatile audio codec.'
   s.homepage              = 'https://github.com/Phonebooth/OpusKit'
