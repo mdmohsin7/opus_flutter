@@ -1,24 +1,17 @@
-#
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html.
-# Run `pod lib lint opus_flutter_ios.podspec` to validate before publishing.
-#
 Pod::Spec.new do |s|
-  s.name             = 'opus_flutter_ios'
-  s.version          = '0.0.1'
-  s.summary          = 'libopus wrappers for flutter in iOS.'
-  s.description      = <<-DESC
-  libopus wrappers for flutter in iOS.
-                       DESC
-  s.homepage         = 'http://example.com'
-  s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Eric Prokop und Nils Wieler Hard- und Softwareentwicklung GbR' => 'prokopwieler.hardundsoftware@gmail.com' }
-  s.source           = { :path => '.' }
+  s.name                  = 'OpusKit'
+  s.version               = '1.4.0'
+  s.summary               = 'A totally open, royalty-free, highly versatile audio codec.'
+  s.homepage              = 'https://github.com/Phonebooth/OpusKit'
+  s.author                = 'Trey Ethridge'
+  s.license               = { :type => 'MIT', :file => 'LICENSE' }
+  s.source                = {
+    :http => 'https://github.com/Phonebooth/OpusKit/releases/download/' + s.version.to_s + '/OpusKit.xcframework.zip'
+  }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
-  s.platform = :ios, '9.0'
-  s.vendored_frameworks = 'opus.xcframework'
-  
-  # Flutter.framework does not contain a i386 slice.
+  s.swift_version         = '5.0'
+  s.ios.deployment_target = '14.0'
+  s.vendored_frameworks   = 'OpusKit.xcframework'
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
-  s.swift_version = '5.0'
 end
