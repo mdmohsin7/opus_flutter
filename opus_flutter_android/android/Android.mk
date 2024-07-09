@@ -46,7 +46,7 @@ LOCAL_CFLAGS 		+= -O3 #Max optimization
 LOCAL_CPPFLAGS      := -DBSD=1
 LOCAL_CPPFLAGS      += -ffast-math -O3 -funroll-loops
 
-include $(BUILD_SHARED_LIBRARY)
+include $(BUILD_STATIC_LIBRARY)
 
 #Build libopusenc
 
@@ -79,4 +79,4 @@ LOCAL_STATIC_LIBRARIES := opus
 
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/include
 
-include $(BUILD_SHARED_LIBRARY)
+include $(BUILD_STATIC_LIBRARY)
